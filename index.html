@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Slot Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Meeting Slot Booking</h1>
+        <div class="booking-form">
+            <div class="form-group">
+                <label for="team-select">Select Your Team:</label>
+                <select id="team-select" required>
+                    <option value="" disabled selected>Choose your team</option>
+                    <!-- Team options will be populated dynamically -->
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">ASU Email Address:</label>
+                <input type="email" id="email" placeholder="Enter your ASU email" required>
+                <div id="email-error" class="error-message"></div>
+            </div>
+            
+            <div class="form-group">
+                <label>Available Time Slots:</label>
+                <div id="time-slots-container" class="time-slots">
+                    <!-- Time slots will be populated dynamically -->
+                </div>
+            </div>
+            
+            <button id="book-button" type="button">Book Slot</button>
+        </div>
+        
+        <div id="confirmation" class="confirmation hidden">
+            <h2>Booking Confirmed!</h2>
+            <p>Your team: <span id="confirm-team"></span></p>
+            <p>Time slot: <span id="confirm-slot"></span></p>
+            <p>Email: <span id="confirm-email"></span></p>
+            <button id="new-booking">Make Another Booking</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
